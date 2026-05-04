@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar HTML</title>
+</head>
+<body>
+    
+    <!-- header -->
+    <h1>Hallo saya sedang belajar HTML</h1>
+    <h2>HTML itu asik belajar</h2>
+    <h3>HTML belajar itu asik</h3>
+    <h4>HTML itu belajar menyenangkan</h4>
+    <h5>HTML itu menyenangkan belajar</h5>
+    <h6>HTML itu belajar menyenangkan</h6>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Eius dolores, accusantium, alias tenetur nihil voluptatum, repellat maxime dolor eaque repudiandae iusto. Voluptatem ducimus voluptatibus maiores quisquam officiis quo, nobis quae!
+    </p>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, ipsa.
+    </p>
+
+    <a href="https://youtube.com" target="_blank" title="@fakhri Channel">Kunjungi Channel Saya</a>
+    <a href="home.html" target="_blank" title="@fakhri Channel">Halaman Home</a>
+
+    <img src="https://d1bpj0tv6vfxyp.cloudfront.net/articles/538508_2-3-2021_10-55-48.jpeg" alt="Gambar Kucing" width="200">
+    <img src="asset/kucing.jpeg" alt="Local" width="200">
+    <img src="../gambar/kucing.jpeg" alt="Beda Folder" width="200">
+
+    <!-- unordered list -->
+    <ul style="list-style:square;">
+        <li>Mie Ayam</li>
+        <li>Bakso</li>
+        <li>Sate</li>
+        <li>Soto</li>
+    </ul>
+
+
+    <!-- ordered list -->
+    <ol type="i" start="10">
+        <li>Jus Mangga</li>
+        <li>Jus Apel</li>
+        <li>Jus Tomat</li>
+        <li>Jus Pepaya</li>
+    </ol>
+    
+    <div class="header">
+        <div class="logo"></div>
+        <div class="navbar">
+            <ul>
+                <li>Home</li>
+                <li>Beranda</li>
+                <li>Proyek</li>
+                <li>Kontak</li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="title">
+            <h1>Berita Harian <span style="color: orangered; font-family: Verdana, Geneva, Tahoma, sans-serif;">Jakarta</span> <span style="color: blue; font-family: Verdana, Geneva, Tahoma, sans-serif;">Terbaru</span> </h1>
+        </div>
+    </div>
+
+    <!--
+        class = boleh digunakan berulang. identik dengan CSS
+        id = kalau bisa hanya 1 kali per halaman. identik dengan JavaScript
+    -->
+
+    <!-- form HTML -->
+
+    <form action="#" method="post">
+        <div class="group-form">
+            <!-- biasanya ada label -->
+            <!-- biasanya ada Jenis Input -->
+            <label for="">Nama Lengkap</label>
+            <input type="text" name="full_name" required placeholder="Masukkan Nama Lengkap..">
+        </div>
+
+        <div class="group-form">
+            <label for="">Password</label>
+            <input type="password" name="password">
+        </div>
+
+        <div class="group-form">
+            <label for="">Email</label>
+            <input type="email" name="email" placeholder="email@gmail.com">
+        </div>
+
+        <select name="month" id="month">
+            <option value="" disabled> Pilih Bulan </option>
+            <option value="Januari" > Januari </option>
+            <option value="Februari" > Februari </option>
+            <option value="Maret" > Maret </option>
+            <option value="April" > April </option>
+            <option value="Mei" > Mei </option>
+            <option value="Juni" > Juni </option>
+            <option value="Juli" > Juli </option>
+            <option value="Agustus" > Agustus </option>
+            <option value="September" > September </option>
+            <option value="Oktober" > Oktober </option>
+            <option value="November" > November </option>
+            <option value="Desember" > Desember </option>
+        </select>
+        <br>
+        <textarea name="Keterangan" id="" cols="" rows="10" placeholder="Keterangan"></textarea>
+
+        <!--setiap form jika datanya ingin diolah, wajib adanya button submit-->
+        <div class="group-form">
+            <button type="submit">Tambah</button>
+        </div>
+    </form>
+
+
+    <table border="1" style="width: 80%; margin: 30px 0px; border-collapse: collapse;">
+        <!--thead-->
+        <thead>
+            <th>Nama Lengkap</th>
+            <th>Prodi</th>
+            <th>Fakultas</th>
+            <th>NIM</th>
+            <th>Alamat</th>
+        </thead>
+        <tbody>
+            <!--baris-->
+            <tr>
+                <td style="padding: 10px;" colspan="5"><center>Asep Sedang Cuti</center></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">Jajang</td>
+                <td style="padding: 10px;">Teknik Informatika</td>
+                <td style="padding: 10px;" rowspan="3">Ilmu Komputer</td>
+                <td style="padding: 10px;">123456</td>
+                <td style="padding: 10px;" rowspan="3">Jakarta Barat</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">Entis</td>
+                <td style="padding: 10px;">Teknik Informatika</td>
+                <td style="padding: 10px;">234567</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">Dadang</td>
+                <td style="padding: 10px;">Teknik Informatika</td>
+                <td style="padding: 10px;">345678</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">Nisa</td>
+                <td style="padding: 10px;" rowspan="2" >Seni Tari</td>
+                <td style="padding: 10px;" rowspan="4">Seni Budaya</td>
+                <td style="padding: 10px;">456789</td>
+                <td style="padding: 10px;">Jakarta Utara</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">Lisma</td>
+                <td style="padding: 10px;">567890</td>
+                <td style="padding: 10px;">Jakarta Pusat</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">Ade</td>
+                <td style="padding: 10px;"rowspan=2>Seni Musik</td>
+                <td style="padding: 10px;">678901</td>
+                <td style="padding: 10px;">Jakarta Timur</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">Arwana</td>
+                <td style="padding: 10px;">789012</td>
+                <td style="padding: 10px;">Jakarta Barat</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <audio src="http://www.sousound.com/music/healing/healing_07.mp3" controls></audio>
+
+    <br>
+
+    <video src="https://res.cloudinary.com/demo/video/upload/elephants.mp4" autoplay loop width="800"></video>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/m0FYJ3s67hg?si=6Mz-_JW62DNiV8J4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4644114440925!2d106.79150817480307!3d-6.202302293785471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f694d61e78e1%3A0x2cd0af294059c8fa!2sidn!5e0!3m2!1sid!2sid!4v1777877016945!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</body>
+</html>
