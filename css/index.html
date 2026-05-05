@@ -1,41 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <!--memanggil css dengan css external-->
-    <link rel="stylesheet" href="style.css">
+    <!-- ctrl + / untuk shortcut komentar -->
+    <!-- shift + alt + F untuk Pemakaian Prettier buat merapihkan codingan  -->
 
-    <!-- internal css -->
-    <style>
-        .text-blue {
-          color: #0088cc;
-        }
-        .text-title {
-          font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-        }
-        .text-content {
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-        .bg-blue {
-            background-color: #0088cc;
-            color: #ffffff;
-        }
-        .text-large {
-            font-size: 1.5rem;
-        }
-    </style>
-    </head>
-    <body>
-      <h1 class="text-red text-title">Ini adalah elemen</h1>
-      <p class="text-content">
-        <span class="text-blue">Lorem ipsum dolor sit amet,</span> consectetur
-        adipisicing elit. Similique iste minima, nesciunt numquam hic vel nihil a
-        reprehenderit exercitationem quisquam!
-      </p>
-      <p class="bg-blue text-large">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio perferendis illum, libero corporis sunt sint modi nemo minima totam aperiam.</p>
-    </body>
-  </html>
+    <!--font dari google font menggunakan link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--memanggil css dengan css external-->
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <!--dvw(display view width) dvh(display view height)-->
+    <!--kalo mau ukuran sama layar device yang digunakan (container css)-->
+
+    <div class="container">
+      <div class="child">
+        <p>ini adalah child</p>
+      </div>
+    </div>
+    <h1 class="text-red text-title">Ini adalah elemen</h1>
+    <p class="font-google fw-bold text-right">
+      <span class="text-blue">Lorem ipsum dolor sit amet,</span> consectetur
+      adipisicing elit. Similique iste minima, nesciunt numquam hic vel nihil a
+      reprehenderit exercitationem quisquam!
+    </p>
+    <p class="bg-blue font-google text-large">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+      perferendis illum, libero corporis sunt sint modi nemo minima totam
+      aperiam.
+    </p>
+
+    <!-- Container Display Block -->
+
+    <div class="container">
+      <h2 class="font-google">Display Block</h2>
+      <ul>
+        <li class="font-google">Selalu membuat baris baru.</li>
+        <li class="font-google">Bisa diatur height dan width.</li>
+        <li class="font-google">Bisa diatur margin dan padding.</li>
+      </ul>
+
+      <div class="card" style="float: right;">Card 1</div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+
+      <span class="card d-block">Span Card 1</span>
+      <span class="card d-block">Span Card 2</span>
+      <span class="card d-block">Span Card 3</span>
+    </div>
+
+    <!-- Container Display Inline -->
+
+    <div class="container">
+      <h2 class="font-google">Display Inline</h2>
+      <ul>
+        <li class="font-google">Menambah elemen pada baris yang sama.</li>
+        <li class="font-google">Ukuran sesuai dengan isi konten.</li>
+        <li class="font-google">Margin hanya berlaku margin X.</li>
+      </ul>
+
+      <div class="card d-inline">Card 1</div>
+      <div class="card d-inline">Card 2</div>
+      <div class="card d-inline">Card 3</div>
+
+      <span class="card d-inline">Span Card 1</span>
+      <span class="card d-inline">Span Card 2</span>
+      <span class="card d-inline">Span Card 3</span>
+
+      <!-- contoh penerapan pada navbar -->
+    <div class="navbar">
+        <ul>
+          <li class="list-item">Home</li>
+          <li class="list-item">Service</li>
+          <li class="list-item">About Me</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+        <h1>Position Relative</h1>
+        <div class="card d-inline-block">Kartu Pertama</div>
+        <div class="card d-inline-block card-relative" style="bottom: 40px;">Kartu Kedua</div>
+
+        <div class="card d-inline-block card-relative">
+            <h5>Ini adalah kartu relative</h5>
+            <span class="badge-promo" style="top: -8px; right: 10px;">Diskon 10%</span>
+        </div>
+        
+        <!-- Untuk penggunaan position relative, tambahkan pada classnya relative setelah itu tambahkan sisi mana yang mau didorong -->
+        <!-- Untuk penggunaan position absolute itu ngambil dari elemen parent yang dimana coding Body -->
+
+        <div class="card d-inline-block">
+            <h5>Ini adalah kartu bukan relative</h5>
+            <span class="badge-promo" style="top: 10px;">Diskon 10%</span>
+        </div>
+        
+        <div class="card d-inline-block">Kartu Kelima</div>
+        <div class="card d-inline-block">Kartu Keenam</div>
+    </div>
+
+    <div class="navbar sticky">
+        <ul>
+          <li class="list-item">Home</li>
+          <li class="list-item">Service</li>
+          <li class="list-item">About Me</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="call-me">
+        <p class="font-google">
+            <a href="" style="color: #ffffff; text-decoration: none;">Hubungi Kami</a>
+        </p>
+    </div>
+
+      <!-- Display inline-block -->
+
+      <div class="container">
+        <h2 class="font-google">Display inline-block</h2>
+        <ul>
+          <li class="font-google">Selalu membuat elemen dalam 1 baris.</li>
+          <li class="font-google">Bisa diatur width dan height.</li>
+          <li class="font-google">Margin dan Padding berlaku.</li>
+        </ul>
+  
+        <div class="card d-inline-block">Card 1</div>
+        <div class="card d-inline-block">Card 2</div>
+        <div class="card d-inline-block">Card 3</div>
+  
+        <span class="card d-inline-block">Span Card 1</span>
+        <span class="card d-inline-block">Span Card 2</span>
+        <span class="card d-inline-block">Span Card 3</span>
+      </div>
+
+      <div class="container">
+        <h2 class="font-google">Display None</h2>
+        <ul>
+          <li class="font-google">Menghilangkan elemen yang ada.</li>
+          <li class="font-google">Berbeda dengan visiblity hide.</li>
+          <li><p>Card 1 pakai style display: none; sedangkan card 5 pakai visibility: hidden;</p></li>
+        </ul>
+  
+        <!-- Perbedaan penggunaan display none dan visibility hidden -->
+        <!-- Penggunaan pakai display none pada card 1 -->
+        <div class="card d-inline-block" style="display: none;">Card 1</div>
+        <div class="card d-inline-block">Card 2</div>
+        <div class="card d-inline-block">Card 3</div>
+        <div class="card d-inline-block">Card 4</div>
+        <!-- Penggunaan pakai style Visibility hidden pada card 5 -->
+        <div class="card d-inline-block" style="visibility: hidden;">Card 5</div> 
+        <div class="card d-inline-block">Card 6</div>
+      </div>
+
+    </div>
+
+        <!-- justify-around -->
+        <!-- justify evenly -->
+        <!-- justify beetween -->
+
+        <div class="container d-flex" style="justify-content: center;">
+            <div class="card-flex"></div>
+            <div class="card-flex"></div>
+            <div class="card-flex"></div>
+            <div class="card-flex"></div>
+        </div>
+
+        <div class="container d-grid">
+            <div class="card-grid"></div>
+            <div class="card-grid hilang" style="background-color: purple;"></div>
+            <div class="card-grid"></div>
+            <div class="card-grid"></div>
+            <div class="card-grid"></div>
+        </div>
+
+  </body>
+</html>

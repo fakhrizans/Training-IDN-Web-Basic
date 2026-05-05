@@ -1,5 +1,215 @@
 /* tinggal buat style.css nya aja */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
-.text-red {
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .text-blue {
+    color: #0088cc;
+  }
+
+  .text-title {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+
+  .text-content {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .bg-blue {
+    background-color: #0088cc;
+    color: #ffffff;
+  }
+
+  .text-large {
+    font-size: 1.5rem;
+  }
+
+  .fw-bold {
+    font-weight: 600;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .container {
+    width: 90dvw;
+    min-height: 60dvh; /*lawannya max-height*/
+    padding: 30px; /*padding-top, padding-left, padding-right, padding-bottom*/
+    margin: 30px 10px;
+    border: #3e3e3e 0.5px solid;
+  }
+
+  .child {
+    background-color: aliceblue;
+    width: 60%;
+    height: 30%;
+    margin: 0 40px; /*margin-top, margin-left, margin-right, margin-bottom*/
+  }
+
+  .card {
+    width: 200px;
+    height: 100px;
+    background: #a5a5a5;
+    background: lightcoral;
+    margin: 20px;
+  }
+
+  .d-block {
+    display: block;
+  }
+
+  .d-inline {
+    display: inline;
+  }
+
+  .d-inline-block {
+    display: inline-block;
+  }
+
+  .card-relative {
+    position: relative;
+  }
+
+  .badge-promo {
+    background: #ff0000;
+    color: #ffffff;
+    padding: 8px;
+    position: absolute;
+  }
+
+  /* navbar */
+  .navbar {
+    width: 60%;
+    height: 60px;
+    border: #3e3e3e40 0.5px solid;
+    margin-top: 20px;
+    padding: 30px;
+    animation: background 2s infinite alternate;
+  }
+
+  .list-item {
+    display: inline;
+    margin: 20px;
+  }
+
+  .call-me {
+    background: linear-gradient(to top right, #0088cc, #d846e0);
+    width: 200px;
+    padding: 20px;
+
+    /* Untuk penggunaan posisi Fixed harus diberi 2 sisi penempatannya */
+    position: fixed; 
+    bottom: 10px;
+    right: 20px;
+
+    /* buat lebih smooth radiusnya kelipatan 8 */
+    border-radius: 1000px;
+    text-align: center;
+  }
+
+  /* simpel animasi saat dihover */
+  .call-me:hover {
+    background: #b565ea; /*merubah background saat cursor mengenai tombol*/
+    transition: 1.5s;
+  }
+
+  /* Posisi yang dapat menjadi fixed ketika dilewati layar
+   Disini diberi top dan bottom */
+  .sticky {
+    position: sticky;
+    top: 10px;
+    bottom: 5px;
+    background: #ffffff;
+    z-index: 10; 
+  }
+
+  /* Untuk penggunaan display  */
+  /* justify untuk menggeser main accist
+  sedangkan align item untuk menggerser cross accist */
+  .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 10px;  */ /*Gap berbeda dengan margin, tapi gap dan margin bisa disatukan*/
+  }
+
+  .card-flex {
+    background-color: #f0f8ff;
+    border: solid #4e4e4e50 0.6px;
+    padding: 10px;
+    /* height: 100px; */
+
+    /* merupakan nilai default */
+    flex-basis: 250px;
+    margin: 10px;
+    flex-grow: 1;
+    flex-shrink: 1;   
+  }
+
+  .d-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card-grid {
+    background: #0088cc;
+    border: 0.5px #ffffff solid;
+  }
+
+  .text-red {
     color: #ff0000;
-}
+  }
+
+  .font-google {
+    font-family: "Google Sans", sans-serif;
+  }
+
+
+  /* Membuat tampilan layar berubah sesuai ukuran layar device yang dipakai */
+  /* Untuk mengetahui ukuran ukurna device menggunakan inspect */
+
+  @media screen and (max-width: 768px) {
+    .d-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hilang {
+        display: none;
+    }
+
+  } 
+
+  @media screen and (max-width: 425px) {
+    .d-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hilang {
+        display: block;
+    }
+
+  }
+  
+  /* Untuk Animasi */
+  @keyframes background {
+    0% {
+        background-color: red;
+        /* transform: rotate(90deg); */ /*satuannya degree karena rotate/rotasi*/
+        transform: translateY(100px);
+    }
+    25% {
+        background-color: yellow;
+    }
+    50% {
+        background-color: green;
+    }
+    75% {
+        background-color: blue;
+    }
+    100% {
+        background-color: white;
+    }
+  }

@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Semantic</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!--Semantic membuat elemen semakin jelas tugas-->
 
     <!--Semantic HTML isinya :
@@ -22,35 +29,46 @@
 
     -->
 
-    <header>
-        <!--memberikan logo bisa pake image atau header-->
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Service</li>
-                <li>Product</li>
-                <li>Gallery</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+    <header class="area-header">
+      <!--memberikan logo bisa pake image atau header-->
+
+      <div class="logo">
+        <img
+          src="https://png.pngtree.com/png-vector/20230809/ourmid/pngtree-animation-of-cheese-logo-in-the-form-of-a-yellow-coin-vector-png-image_6838926.png"
+          alt="logo website"
+        />
+      </div>
+
+      <nav>
+        <ul class="navigation">
+          <li class="nav-item"><a href="">Home</a></li>
+          <li class="nav-item"><a href="">Service</a></li>
+          <li class="nav-item"><a href="">Product</a></li>
+          <li class="nav-item"><a href="">Gallery</a></li>
+        </ul>
+      </nav>
+
+        <a href="" class="btn-call">Call Us</a>
+
     </header>
-    <main>
-        <section id="product"></section>
-        <!--masukkan berupa card-->
-        <section id="myservice"></section>
-        <!--jelaskan tentang service ada apa aja-->
-        <section id="gallery"></section>
-        <!--tampilkan gambar-->
-        <section id="article"></section>
-        <!--article yang panjang pakai lorem-->
-        <aside>
-            <!--berita-->
-            <!--iklan-->
-        </aside>
+    <main class="main-content">
+        <div class="column">
+            <section id="product"></section>
+            <!--masukkan berupa card-->
+            <section id="myservice"></section>
+            <!--jelaskan tentang service ada apa aja-->
+            <section id="gallery"></section>
+            <!--tampilkan gambar-->
+            <section id="article"></section>
+            <!--article yang panjang pakai lorem-->
+        </div>
+            <aside class="sidebar">
+                <!--berita-->
+                <!--iklan-->
+            </aside>
     </main>
     <footer>
-        <!--isinya bisa copyright dan medsos-->
+      <!--isinya bisa copyright dan medsos-->
     </footer>
-    
-</body>
+  </body>
 </html>
