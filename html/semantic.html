@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Semantic</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style1.css" />
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,30 +42,203 @@
       <nav>
         <ul class="navigation">
           <li class="nav-item"><a href="">Home</a></li>
-          <li class="nav-item"><a href="">Service</a></li>
           <li class="nav-item"><a href="">Product</a></li>
+          <li class="nav-item"><a href="">Service</a></li>
           <li class="nav-item"><a href="">Gallery</a></li>
         </ul>
       </nav>
 
-        <a href="" class="btn-call">Call Us</a>
-
+      <a href="" class="btn-call">Call Us</a>
     </header>
     <main class="main-content">
-        <div class="column">
-            <section id="product"></section>
-            <!--masukkan berupa card-->
-            <section id="myservice"></section>
-            <!--jelaskan tentang service ada apa aja-->
-            <section id="gallery"></section>
-            <!--tampilkan gambar-->
-            <section id="article"></section>
-            <!--article yang panjang pakai lorem-->
-        </div>
-            <aside class="sidebar">
-                <!--berita-->
-                <!--iklan-->
-            </aside>
+      <div class="column">
+        <section id="hero" class="hero">
+          <div class="col">
+            <!-- area title -->
+            <h1>Welcome to Cheesey</h1>
+            <p style="margin-top: 20px">
+              Nice to meet you!<br />
+              Consume quality cheese with Cheesey
+            </p>
+            <a href="" class="btn-explore">Explore Now</a>
+          </div>
+          <div class="col">
+            <div class="image-banner" style="height: 100%">
+              <img
+                class="img-banner"
+                src="https://png.pngtree.com/png-vector/20250321/ourmid/pngtree-cheese-cartoon-png-image_15808321.png"
+                width="280px"
+                alt="Gambar Banner"
+              />
+            </div>
+          </div>
+        </section>
+        <section id="product" class="section-product">
+          <!--masukkan berupa card-->
+          <div class="container">
+            <h1 style="text-align: center">Our Product</h1>
+            <div class="d-grid">
+              <div class="card-product">
+                <img
+                  src="https://view.subpage.app/app/company/C532b8873cc5442e2b1f2265b77a7d7dc/domain/MTiT0jFlGh/page/M6K4TirmGh/glossary/M36e5669dfd4b52477c65571a1479acd81676987587657/file/Mb4de6e716cf9eb420a1f39b7a0b320481707989448555.jpeg"
+                  alt="gambar-produk"
+                  class="img-product"
+                />
+                <h2
+                  style="
+                    font-size: 1.2rem;
+                    margin-top: 24px;
+                    text-align: center;
+                  "
+                >
+                  Cheedar
+                </h2>
+                <a href="" class="btn-enroll">Selengkapnya</a>
+              </div>
+              <div class="card-product">
+                <img
+                  src="https://view.subpage.app/app/company/C532b8873cc5442e2b1f2265b77a7d7dc/domain/MTiT0jFlGh/page/M6K4TirmGh/glossary/M36e5669dfd4b52477c65571a1479acd81676987587657/file/Mb4de6e716cf9eb420a1f39b7a0b320481707989448555.jpeg"
+                  alt="gambar-produk"
+                  class="img-product"
+                />
+                <h2
+                  style="
+                    font-size: 1.2rem;
+                    margin-top: 24px;
+                    text-align: center;
+                  "
+                >
+                  Parmesan
+                </h2>
+                <a href="" class="btn-enroll">Selengkapnya</a>
+              </div>
+              <div class="card-product">
+                <img
+                  src="https://view.subpage.app/app/company/C532b8873cc5442e2b1f2265b77a7d7dc/domain/MTiT0jFlGh/page/M6K4TirmGh/glossary/M36e5669dfd4b52477c65571a1479acd81676987587657/file/Mb4de6e716cf9eb420a1f39b7a0b320481707989448555.jpeg"
+                  alt="gambar-produk"
+                  class="img-product"
+                />
+                <h2
+                  style="
+                    font-size: 1.2rem;
+                    margin-top: 24px;
+                    text-align: center;
+                  "
+                >
+                  Mozarella
+                </h2>
+                <a href="" class="btn-enroll">Selengkapnya</a>
+              </div>
+              <div class="card-product">
+                <img
+                  src="https://view.subpage.app/app/company/C532b8873cc5442e2b1f2265b77a7d7dc/domain/MTiT0jFlGh/page/M6K4TirmGh/glossary/M36e5669dfd4b52477c65571a1479acd81676987587657/file/Mb4de6e716cf9eb420a1f39b7a0b320481707989448555.jpeg"
+                  alt="gambar-produk"
+                  class="img-product"
+                />
+                <h2
+                  style="
+                    font-size: 1.2rem;
+                    margin-top: 24px;
+                    text-align: center;
+                  "
+                >
+                  Blue Cheese
+                </h2>
+                <a href="" class="btn-enroll">Selengkapnya</a>
+              </div>
+            </div>
+            <div
+              class=""
+              style="width: 100%; display: flex; justify-content: center"
+            >
+              <a href="" class="more">More Product...</a>
+            </div>
+          </div>
+        </section>
+        <section id="myservice" class="service">
+          <!--jelaskan tentang service ada apa aja-->
+          <div class="container">
+            <h1 style="text-align: center; margin-bottom: 24px">Our Service</h1>
+            <div class="grid-service">
+              <div class="banner-service">
+                <img style="margin-left: 20px;"
+                  src="data:image/jpeg;base64,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"
+                  width="300px"
+                  alt="banner-service"
+                />
+              </div>
+              <div class="content-service">
+                <article>
+                  <h2>Request Product</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Nisi, deserunt!
+                  </p>
+                </article>
+                <article>
+                  <h2>Become Member</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Nisi, deserunt!
+                  </p>
+                </article>
+                <article>
+                  <h2>Consultation</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Nisi, deserunt!
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery">
+          <!--tampilkan gambar-->
+          <div class="container">
+            <h1 style="text-align: center">Our Gallery</h1>
+            <div class="d-grid">
+              <div class="card-gallery">
+                <img
+                  src="https://view.subpage.app/app/company/C532b8873cc5442e2b1f2265b77a7d7dc/domain/MTiT0jFlGh/page/M6K4TirmGh/glossary/M36e5669dfd4b52477c65571a1479acd81676987587657/file/Mb4de6e716cf9eb420a1f39b7a0b320481707989448555.jpeg"
+                  alt="gambar-produk"
+                  class="img-product"
+                />
+              </div>
+              <div class="card-gallery">
+                <img
+                  src="https://view.subpage.app/app/company/C532b8873cc5442e2b1f2265b77a7d7dc/domain/MTiT0jFlGh/page/M6K4TirmGh/glossary/M36e5669dfd4b52477c65571a1479acd81676987587657/file/Mb4de6e716cf9eb420a1f39b7a0b320481707989448555.jpeg"
+                  alt="gambar-produk"
+                  class="img-product"
+                />
+              </div>
+              <div class="card-gallery">
+                <img
+                  src="https://view.subpage.app/app/company/C532b8873cc5442e2b1f2265b77a7d7dc/domain/MTiT0jFlGh/page/M6K4TirmGh/glossary/M36e5669dfd4b52477c65571a1479acd81676987587657/file/Mb4de6e716cf9eb420a1f39b7a0b320481707989448555.jpeg"
+                  alt="gambar-produk"
+                  class="img-product"
+                />
+              </div>
+              <div class="card-gallery">
+                <img
+                  src="https://view.subpage.app/app/company/C532b8873cc5442e2b1f2265b77a7d7dc/domain/MTiT0jFlGh/page/M6K4TirmGh/glossary/M36e5669dfd4b52477c65571a1479acd81676987587657/file/Mb4de6e716cf9eb420a1f39b7a0b320481707989448555.jpeg"
+                  alt="gambar-produk"
+                  class="img-product"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="article">
+          <!--article yang panjang pakai lorem-->
+        </section>
+      </div>
+      <aside class="sidebar">
+        <!--berita-->
+        <!--iklan-->
+      </aside>
     </main>
     <footer>
       <!--isinya bisa copyright dan medsos-->
