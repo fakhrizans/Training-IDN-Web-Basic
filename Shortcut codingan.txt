@@ -1,3 +1,0 @@
-shift + alt + f = prettier
-ctrl + / = komen
-ctrl + d = pilih semua kata yang sama dan pointer bisa banyak/menyesuaikan
