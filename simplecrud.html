@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+        
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "Google Sans", sans-serif;
+        }
+
+        .container {
+            width: 80dvw;
+            min-height: 40dvh;
+            margin: 24px;
+            padding: 24px;
+            /* border: 0.4px #4e4e4e50 solid; */
+        }
+
+        .card {
+            width: 96%;
+            border: 0.4px #4e4e4e50 solid;
+            padding: 24px;
+            margin-bottom: 24px;
+    
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 2fr 2fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            gap: 16px;
+        }
+
+        input, button {
+            padding: 8px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 style="margin-bottom: 24px;">Simple CRUD HTML, CSS dan Vanilla JS</h1>
+            <form action="" method="post">
+
+                <div class="grid-3">
+                    <div class="form-group">
+                        <label for="">Product Name</label>
+                        <input type="text" name="product_name" id="productName" placeholder="ex: Sabun">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="">Image Product</label>
+                        <input type="text" name="image_product" id="imageProduct" placeholder="image url(https://....">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="card">
+        </div>
+    </div>
+</body>
+</html>

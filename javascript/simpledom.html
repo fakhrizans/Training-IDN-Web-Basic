@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Hallo JS</h1>
+      <p class="subtitle">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+        et.
+      </p>
+      <span class="highlight">Lorem ipsum dolor sit amet.</span>
+
+      <img src="" alt="" id="gambar" />
+      <img src="" alt="" id="gambarBaru" />
+
+      <h1 id="info">Informasi Website</h1>
+
+      <input type="text" value="Asep" id="name" />
+
+      <ul id="listMakan">
+      </ul>
+
+      <button id="btnClick">Klik saya</button>
+
+      <input type="text" id="nama" placeholder="Nama Kamu">
+      <button id="btnNama">Ucapkan!</button>
+      <p id="ucapan"></p>
+
+    </div>
+
+    <script>
+      // Memilih elemen
+      const judul = document.getElementById("title"); // memanggil dengan Id
+      const subtitle = document.getElementsByClassName("subtitle"); // memanggil dengan class
+      const highlight = document.querySelector(".highlight"); // flexible memanggil berdasarkan Id(#) atau class(.)
+
+      console.log(highlight);
+
+      // Edit elemen
+      // Mengubah text pada tag
+      judul.textContent =
+        "Saat ini saya sedang belajar Document Object Model (DOM)";
+
+      judul.innerHTML = "<b>Hallo JS<b>";
+
+      // Mengubah Atribut
+      // Cara langsung :
+      document.getElementById("gambar").src =
+        "https://png.pngtree.com/png-vector/20230809/ourmid/pngtree-animation-of-cheese-logo-in-the-form-of-a-yellow-coin-vector-png-image_6838926.png";
+      document.getElementById("gambar").width = 240;
+
+      //  Set Attribute
+      const image = document.getElementById("gambarBaru");
+      image.setAttribute("alt", "Gambar terbaru");
+      image.setAttribute("width", "240");
+      image.setAttribute(
+        "src",
+        "https://png.pngtree.com/png-vector/20230809/ourmid/pngtree-animation-of-cheese-logo-in-the-form-of-a-yellow-coin-vector-png-image_6838926.png"
+      );
+
+      // Perbaiki style
+      const info = document.getElementById("info");
+      info.style.color = "#0088cc"; // mengubah warna teks
+      info.style.fontFamily = "Tahoma"; // mengubah font teks
+      info.classList.add("text-primary"); // menambahkan atribut class, in case cssnya pakai boostraps / tailwind
+
+      // Mengambil nilai pada elemen
+      const nama = document.getElementById("name").value; // ambil value pada input
+      console.log(nama);
+
+      // Matriks 
+      const makan = [
+        { nama: "Sate ayam", harga: "20000" },
+        { nama: "Bakso", harga: "15000" },
+        { nama: "Bubur Ayam", harga: "15000" },
+        { nama: "Mie Ayam", harga: "20000" },
+        { nama: "Salad", harga: "10000" },
+      ];
+
+      const list = document.getElementById("listMakan");
+
+      for (let i in makan) {
+        const li = document.createElement("li");
+        li.textContent = `${makan[i].nama} - Rp. ${makan[i].harga}`;
+        list.appendChild(li);
+      }
+
+
+      // Event listener
+
+      const btnClick = document.getElementById("btnClick");
+      btnClick.addEventListener("click", function(){
+        alert("Button berhasil di klik")
+      })
+
+
+      const name = document.getElementById("nama");
+      const tombol = document.getElementById("btnNama");
+      const ucapan = document.getElementById("ucapan");
+
+      tombol.addEventListener("click", function(){
+        // ambil nilai
+        const inputNama = name.value
+
+        if(inputNama === ""){
+            ucapan.textContent = "Gagal, Field nama tidak boleh kosong"
+            ucapan.style.color = "#ff0000"
+        } else {
+            ucapan.textContent = `Hallo selamat dantang, ${inputNama}`;
+            ucapan.style.color = "#0088cc"
+        }
+
+      })
+
+    </script>
+  </body>
+</html>
