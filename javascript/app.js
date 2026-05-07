@@ -340,3 +340,27 @@ function showJajargenjang() {
     let inputTinggi = Number(prompt("Masukkan Tinggi ..."))
     alert("Luas Jajargenjang adalah = " + jajargenjang(inputAlas, inputTinggi))
 }
+
+// Belajar asyncronus ambil data dari sebuah variabel array
+
+const produk = [
+    { id : 1, nama : "sepatu", harga : 250000},
+    { id : 2, nama : "sendal", harga : 100000},
+    { id : 3, nama : "tas", harga : 300000},
+    { id : 4, nama : "sabuk", harga : 50000},
+    { id : 5, nama : "topi", harga : 75000},
+]
+
+// hanya mengambil data
+async function allproduct() {
+    await new Promise(resolve => setTimeout(resolve, 3000)) // #1 Jika ingin ada Loading, 3000 itu detik soalnya mdetik
+    return produk 
+}
+
+// Untuk menampilkan data
+async function show() {
+
+    console.log("Sedang menampilkan data ...") // #2 lanjutan untuk loading
+    const allData = await allproduct();
+    console.log('Berikut data produk', allData)
+}
